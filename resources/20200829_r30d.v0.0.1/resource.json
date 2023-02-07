@@ -1,0 +1,36 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:20200829_r30d",
+  "version" : "0.0.1",
+  "adapterType" : "raster",
+  "localPath" : "im.fire.sicily/resources/20200829_r30d.v0.0.1",
+  "geometry" : "S2(38,33){bbox=[11.899860343 15.699859963 35.499860896 38.799860566],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "20200829_r30d.tif",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1645361827671,
+  "metadata" : { },
+  "parameters" : {
+    "transform" : "",
+    "nodata" : "-3.4E38"
+  },
+  "localPaths" : "im.fire.sicily/resources/20200829_r30d.v0.0.1/20200829_r30d.tif",
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.699859963,
+    "west" : 11.899860343,
+    "north" : 38.799860566,
+    "south" : 35.499860896,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "codelists" : [ ],
+  "availability" : null,
+  "exportFormats" : {
+    "zip" : "GeoTiff"
+  }
+}

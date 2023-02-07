@@ -1,0 +1,47 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:wui_100m_2020_sicily_italy",
+  "version" : "0.0.1",
+  "adapterType" : "wcs",
+  "localPath" : "im.fire.sicily/resources/wui_100m_2020_sicily_italy.v0.0.1",
+  "geometry" : "S2(3770,3293){bbox=[11.84285932539981 15.658907460939272 35.478736216340835 38.81208613903163],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "wui_100m_2020_sicily_italy",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1627749783327,
+  "metadata" : {
+    "im:keywords" : "",
+    "dc:comment" : "High risk zones for the population where forest area are less than 200 m. Resolution 100m\r\n",
+    "im:notes" : "",
+    "dc:title" : "WUI (Wildland Urban Interface)",
+    "dc:url" : "",
+    "dc:creator" : "",
+    "im:thematic-area" : "",
+    "dc:originator" : "",
+    "im:geographic-area" : "Sicily",
+    "dc:source" : ""
+  },
+  "parameters" : {
+    "wcsIdentifier" : "fire_sicilia__wui_100m_2020_sicily_italy",
+    "transform" : "",
+    "serviceUrl" : "http://192.168.250.128:8080/geoserver/ows/",
+    "band" : "0",
+    "nodata" : "0.0",
+    "wcsVersion" : "2.0.1"
+  },
+  "localPaths" : [ ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.658907460939272,
+    "west" : 11.84285932539981,
+    "north" : 38.81208613903163,
+    "south" : 35.478736216340835,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : { }
+}

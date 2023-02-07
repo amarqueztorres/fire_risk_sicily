@@ -1,0 +1,47 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:occurrence_100m_2007_2020_sicily_italy",
+  "version" : "0.0.1",
+  "adapterType" : "wcs",
+  "localPath" : "im.fire.sicily/resources/occurrence_100m_2007_2020_sicily_italy.v0.0.1",
+  "geometry" : "S2(3726,3317){bbox=[11.926179128663932 15.653179128663929 35.49369193593412 38.81169193593412],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "occurrence_100m_2007_2020_sicily_italy",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1627749696375,
+  "metadata" : {
+    "im:keywords" : "",
+    "dc:comment" : "Historical occurrence of fire from 2007 to 2020. Resolution of 100m",
+    "im:notes" : "",
+    "dc:title" : "Historical occurrence of fire (2007-2020)",
+    "dc:url" : "",
+    "dc:creator" : "",
+    "im:thematic-area" : "",
+    "dc:originator" : "",
+    "im:geographic-area" : "Sicily",
+    "dc:source" : ""
+  },
+  "parameters" : {
+    "wcsIdentifier" : "fire_sicilia__occurrence_100m_2007_2020_sicily_italy",
+    "transform" : "",
+    "serviceUrl" : "http://192.168.250.128:8080/geoserver/ows/",
+    "band" : "0",
+    "nodata" : "127.0",
+    "wcsVersion" : "2.0.1"
+  },
+  "localPaths" : [ ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.653179128663929,
+    "west" : 11.926179128663932,
+    "north" : 38.81169193593412,
+    "south" : 35.49369193593412,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : { }
+}

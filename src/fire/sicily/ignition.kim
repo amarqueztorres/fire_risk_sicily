@@ -1,0 +1,39 @@
+namespace fire.sicily.ignition;
+
+
+model 'local:amarquez:im.fire.sicily:fire.ml.ignition.bayes.fireml'
+	as occurrence of chemistry:Fire
+	observing
+			earth:AtmosphericTemperature in Celsius,
+			earth:SolarRadiation,
+			im:Weekly earth:PrecipitationVolume in mm,
+			value of ecology:Forest during chemistry:Fire,
+			distance to infrastructure:Road in m,
+			geography:Slope in grade,
+			distance to infrastructure:HumanSettlement in m,
+			im:Weekly im:Maximum earth:AtmosphericTemperature in Celsius,
+//			count of im:Day without earth.incubation:Precipitation,
+			geography:Elevation in m,
+			distance to conservation:ProtectedArea in m,			
+						
+		    landcover:LandCoverType named landcover_type
+   	set to [( 	(landcover_type is landcover:Forest)||
+   				(landcover_type is landcover:AgriculturalVegetation)||
+  				(landcover_type is landcover:Grassland)||
+  				(landcover_type is landcover:Shrubland)
+	        ) ? self : unknown]
+	;		
+	
+model level of (occurrence of chemistry:Fire)
+	observing occurrence of chemistry:Fire named occurrence_of_fire
+ 	lookup (occurrence_of_fire) into 
+		     occurrence_of_fire   | ciccio
+				    --------------------
+			 		      0.25 to 0.41  | im:Low,
+			 		      0.41 to 0.57  | im:Moderate,
+			 		      > 0.57  		| im:High;  
+			 		      
+model presence of chemistry:Burned earth:Region
+	observing 		
+		level of (occurrence of chemistry:Fire) named fire_level
+	set to [fire_level is im:High];  

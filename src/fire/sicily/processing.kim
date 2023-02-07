@@ -1,0 +1,46 @@
+private namespace fire.sicily.processing;
+
+@intensive(space) 
+model each 'local:amarquez:im.fire.sicily:new_arch_sicily_3' 
+	as earth:Site with occurrence of chemistry:Fire,
+		ign as occurrence of chemistry:Fire, 
+		r7t as im:Weekly earth:PrecipitationVolume in mm,
+		r30t as im:Monthly earth:PrecipitationVolume in mm,
+		tg as earth:AtmosphericTemperature in Celsius,
+		tn as im:Minimum earth:AtmosphericTemperature in Celsius,
+		qq as earth:SolarRadiation in J/m^2,
+		tx3 as im:Weekly im:Maximum earth:AtmosphericTemperature in Celsius,
+		norain as count of im:Day without earth.incubation:Precipitation,
+		freq as count of im:Added chemistry:Fire named freq,
+		fuel as value of ecology:Forest during chemistry:Fire,
+		elev as geography:Elevation in m,
+		aspect as geography:Aspect in grade,
+		slope as geography:Slope in grade,
+		protect as distance to conservation:ProtectedArea in m,
+		road as distance to infrastructure:Road in m,
+		human as distance to infrastructure:HumanSettlement in m;
+
+@intensive(space)
+learn occurrence of chemistry:Fire within earth:Site    
+    observing  
+			@archetype earth:Site with occurrence of chemistry:Fire,		
+			
+			@predictor (discretization = weka.discretizer.unsupervised(bins = 10)) earth:AtmosphericTemperature in Celsius named tg,
+			@predictor (discretization = weka.discretizer.unsupervised(bins = 10)) im:Weekly im:Maximum earth:AtmosphericTemperature in Celsius named tx3,
+			@predictor (discretization = weka.discretizer.unsupervised(bins = 5)) earth:SolarRadiation in J/m^2 named qq,
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 10)) im:Weekly earth:PrecipitationVolume in mm named r7t, 
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 5)) count of im:Day without earth.incubation:Precipitation named norain,
+			@predictor (discretization = weka.discretizer.unsupervised(bins = 8)) value of ecology:Forest during chemistry:Fire named fuel,
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 5)) geography:Slope in grade named slope,
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 5)) geography:Elevation in m named elev,
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 5)) distance to conservation:ProtectedArea in m named protect,
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 5)) distance to infrastructure:Road in m named road,
+			@predictor (discretization = weka.discretizer.unsupervised(equalfrequency= true, bins = 5)) distance to infrastructure:HumanSettlement in m named human
+	
+	using im.weka.bayesnet(
+    	discretization = weka.discretizer.unsupervised (bins = 2),
+    	resource = fire.ml.ignition.bayes.fireml, search = weka.bayes.k2(bins=2)
+    );
+    //discretization = weka.discretizer.unsupervised(equalfrequency=true, bins = 2), 
+    
+    

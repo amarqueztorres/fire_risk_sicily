@@ -1,0 +1,46 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:distance2protectedarea_100m_2020_sicily_italia",
+  "version" : "0.0.1",
+  "adapterType" : "wcs",
+  "localPath" : "im.fire.sicily/resources/distance2protectedarea_100m_2020_sicily_italia.v0.0.1",
+  "geometry" : "S2(3381,3682){bbox=[11.92659038712675 15.65283083764332 35.493691935511414 38.811701908252374],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "distance2protectedarea_100m_2020_sicily_italia",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1627750111457,
+  "metadata" : {
+    "im:keywords" : "",
+    "dc:comment" : "",
+    "im:notes" : "",
+    "dc:title" : "Distance to protected area",
+    "dc:url" : "",
+    "dc:creator" : "",
+    "im:thematic-area" : "",
+    "dc:originator" : "",
+    "im:geographic-area" : "Sicily",
+    "dc:source" : ""
+  },
+  "parameters" : {
+    "wcsIdentifier" : "fire_sicilia__distance2protectedarea_100m_2020_sicily_italia",
+    "transform" : "",
+    "serviceUrl" : "http://192.168.250.128:8080/geoserver/ows/",
+    "band" : "0",
+    "wcsVersion" : "2.0.1"
+  },
+  "localPaths" : [ ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.65283083764332,
+    "west" : 11.92659038712675,
+    "north" : 38.811701908252374,
+    "south" : 35.493691935511414,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : { }
+}

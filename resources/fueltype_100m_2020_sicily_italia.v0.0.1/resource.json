@@ -1,0 +1,47 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:fueltype_100m_2020_sicily_italia",
+  "version" : "0.0.1",
+  "adapterType" : "wcs",
+  "localPath" : "im.fire.sicily/resources/fueltype_100m_2020_sicily_italia.v0.0.1",
+  "geometry" : "S2(3768,3293){bbox=[11.84379399189914 15.657568487345209 35.4790398145651 38.8121714643394],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "fueltype_100m_2020_sicily_italia",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1627749951023,
+  "metadata" : {
+    "im:keywords" : "",
+    "dc:comment" : "Forst fuel type",
+    "im:notes" : "",
+    "dc:title" : "Forest fuel type",
+    "dc:url" : "",
+    "dc:creator" : "",
+    "im:thematic-area" : "",
+    "dc:originator" : "University of Catania",
+    "im:geographic-area" : "Sicily",
+    "dc:source" : ""
+  },
+  "parameters" : {
+    "wcsIdentifier" : "fire_sicilia__fueltype_100m_2020_sicily_italia",
+    "transform" : "",
+    "serviceUrl" : "http://192.168.250.128:8080/geoserver/ows/",
+    "band" : "0",
+    "nodata" : "255.0",
+    "wcsVersion" : "2.0.1"
+  },
+  "localPaths" : [ ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.657568487345209,
+    "west" : 11.84379399189914,
+    "north" : 38.8121714643394,
+    "south" : 35.4790398145651,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : { }
+}

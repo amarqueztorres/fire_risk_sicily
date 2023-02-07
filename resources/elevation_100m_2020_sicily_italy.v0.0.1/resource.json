@@ -1,0 +1,47 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:elevation_100m_2020_sicily_italy",
+  "version" : "0.0.1",
+  "adapterType" : "wcs",
+  "localPath" : "im.fire.sicily/resources/elevation_100m_2020_sicily_italy.v0.0.1",
+  "geometry" : "S2(3879,3557){bbox=[11.73311767951787 15.703501295641878 35.3367820248186 38.97766473259418],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "elevation_100m_2020_sicily_italy",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1627750152956,
+  "metadata" : {
+    "im:keywords" : "",
+    "dc:comment" : "",
+    "im:notes" : "",
+    "dc:title" : "Elevation",
+    "dc:url" : "",
+    "dc:creator" : "",
+    "im:thematic-area" : "",
+    "dc:originator" : "",
+    "im:geographic-area" : "Sicily",
+    "dc:source" : ""
+  },
+  "parameters" : {
+    "wcsIdentifier" : "fire_sicilia__elevation_100m_2020_sicily_italy",
+    "transform" : "",
+    "serviceUrl" : "http://192.168.250.128:8080/geoserver/ows/",
+    "band" : "0",
+    "nodata" : "32767.0",
+    "wcsVersion" : "2.0.1"
+  },
+  "localPaths" : [ ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.703501295641878,
+    "west" : 11.73311767951787,
+    "north" : 38.97766473259418,
+    "south" : 35.3367820248186,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : { }
+}

@@ -1,0 +1,35 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:occurrence_fire",
+  "version" : "0.0.1",
+  "adapterType" : "raster",
+  "localPath" : "im.fire.sicily/resources/occurrence_fire.v0.0.1",
+  "geometry" : "S2(578,368){bbox=[12.42546452723674 15.651163178711945 36.64651482571224 38.301250237974784],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "occurrence_fire.tiff",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1652203292367,
+  "metadata" : { },
+  "parameters" : {
+    "transform" : ""
+  },
+  "localPaths" : "im.fire.sicily/resources/occurrence_fire.v0.0.1/occurrence_fire.tiff",
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.651163178711945,
+    "west" : 12.42546452723674,
+    "north" : 38.301250237974784,
+    "south" : 36.64651482571224,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "codelists" : [ ],
+  "availability" : null,
+  "exportFormats" : {
+    "zip" : "GeoTiff"
+  }
+}

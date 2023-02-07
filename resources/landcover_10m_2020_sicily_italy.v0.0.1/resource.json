@@ -1,0 +1,47 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:landcover_10m_2020_sicily_italy",
+  "version" : "0.0.1",
+  "adapterType" : "wcs",
+  "localPath" : "im.fire.sicily/resources/landcover_10m_2020_sicily_italy.v0.0.1",
+  "geometry" : "S2(37691,32942){bbox=[11.843793992 15.657807647 35.478705729 38.812173092],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "landcover_10m_2020_sicily_italy",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1627749605554,
+  "metadata" : {
+    "im:keywords" : "",
+    "dc:comment" : "Landcover data of Sicily (adapted to Corine code). Resolution of 10 meters",
+    "im:notes" : "",
+    "dc:title" : "Landcover data",
+    "dc:url" : "",
+    "dc:creator" : "",
+    "im:thematic-area" : "",
+    "dc:originator" : "ARIES",
+    "im:geographic-area" : "Sicily",
+    "dc:source" : ""
+  },
+  "parameters" : {
+    "wcsIdentifier" : "fire_sicilia__landcover_10m_2020_sicily_italy",
+    "transform" : "",
+    "serviceUrl" : "http://192.168.250.128:8080/geoserver/ows/",
+    "band" : "0",
+    "nodata" : "65535.0",
+    "wcsVersion" : "2.0.1"
+  },
+  "localPaths" : [ ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.657807647,
+    "west" : 11.843793992,
+    "north" : 38.812173092,
+    "south" : 35.478705729,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : { }
+}

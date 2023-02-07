@@ -1,0 +1,35 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:net_pollination",
+  "version" : "0.0.1",
+  "adapterType" : "raster",
+  "localPath" : "im.fire.sicily/resources/net_pollination.v0.0.1",
+  "geometry" : "S2(2886,1837){bbox=[12.425430400979062 15.652830837643322 36.64651482571224 38.301250237974784],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "net_pollination.tiff",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1652204987146,
+  "metadata" : { },
+  "parameters" : {
+    "transform" : ""
+  },
+  "localPaths" : "im.fire.sicily/resources/net_pollination.v0.0.1/net_pollination.tiff",
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.652830837643322,
+    "west" : 12.425430400979062,
+    "north" : 38.301250237974784,
+    "south" : 36.64651482571224,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "codelists" : [ ],
+  "availability" : null,
+  "exportFormats" : {
+    "zip" : "GeoTiff"
+  }
+}

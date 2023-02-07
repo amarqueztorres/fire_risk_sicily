@@ -1,0 +1,35 @@
+{
+  "urn" : "local:amarquez:im.fire.sicily:veg_high_both_low",
+  "version" : "0.0.1",
+  "adapterType" : "raster",
+  "localPath" : "im.fire.sicily/resources/veg_high_both_low.v0.0.1",
+  "geometry" : "S2(1472,963){bbox=[12.38758146972569 15.68347990722593 36.604497176804244 38.33518655239569],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "veg_high_both_low.tif",
+  "type" : "NUMBER",
+  "resourceTimestamp" : 1651071851654,
+  "metadata" : { },
+  "parameters" : {
+    "transform" : ""
+  },
+  "localPaths" : "im.fire.sicily/resources/veg_high_both_low.v0.0.1/veg_high_both_low.tif",
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ ],
+  "spatialExtent" : {
+    "east" : 15.68347990722593,
+    "west" : 12.38758146972569,
+    "north" : 38.33518655239569,
+    "south" : 36.604497176804244,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "codelists" : [ ],
+  "availability" : null,
+  "exportFormats" : {
+    "zip" : "GeoTiff"
+  }
+}

@@ -1,0 +1,48 @@
+private namespace fire.sicily.mca;
+
+//	
+//model im:Net value of im:Retained soil:Soil im:Mass caused by ecology:Vegetation
+//	observing
+//		im:Retained soil:Soil im:Mass caused by ecology:Vegetation named soil_mass
+//	set to [soil_mass] then klab.data.normalize();
+//	
+//model im:Net value of chemistry:Organic chemistry:Carbon im:Mass
+//	observing
+//		value of chemistry:Organic chemistry:Carbon im:Mass named organic_mass
+//	set to [organic_mass] then klab.data.normalize();
+
+		
+model 'local:amarquez:im.fire.sicily:veg_high_both_low'
+	as value of ecology:SpeciesRichness;
+	
+model im:Net value of ecology:SpeciesRichness
+	observing
+		value of ecology:SpeciesRichness named biodiversity
+	set to [biodiversity] then klab.data.normalize();
+	
+model 'local:amarquez:im.fire.sicily:net_outdoor'
+	as im:Net value of behavior:Outdoor behavior:Recreation;
+	
+model 'local:amarquez:im.fire.sicily:net_pollination'
+	as im:Net value of ecology:Pollination;
+	
+model 'local:amarquez:im.fire.sicily:occurrence_fire'
+	as occurrence of chemistry:Fire;
+//
+//model im:Net value of occurrence of chemistry:Fire
+//	observing
+//		occurrence of chemistry:Fire named fire_occ
+//	set to [fire_occ] then klab.data.normalize();
+
+model im:Potential value of (occurrence of chemistry:Fire)
+    observing
+    	@cost (value?=10) 	occurrence of chemistry:Fire,
+		@benefit (value?=1) im:Net value of ecology:Pollination,
+		@benefit (value?=1) im:Net value of behavior:Outdoor behavior:Recreation,
+		@benefit (value?=1) im:Net value of ecology:SpeciesRichness
+//      @benefit(value?=1) im:Net value of im:Retained soil:Soil im:Mass caused by ecology:Vegetation named sediment_retention,
+//      @benefit(value?=1) im:Net value of chemistry:Organic chemistry:Carbon im:Mass named carbon_storage
+//      @benefit(value?=1) im:Potential value of value of not infrastructure.incubation:Timber ecology:Biomass caused by landcover:Forest earth:Region
+//      @benefit(value?=1) im:Potential value of es:FloodRegulation named flood_regulation,
+	        
+    using im.mca.concordance(levels = 10);   

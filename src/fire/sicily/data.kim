@@ -1,0 +1,121 @@
+namespace fire.sicily.data;
+
+observe earth:Region named sicily
+	over space(
+			urn = "local:amarquez:im.fire.sicily:context_isla_grande_wgs84",
+			grid = "50 m",
+			projection = "EPSG:4326"),
+	 	time (
+	 		start=2017, end=2019); //, step=1.year
+
+//WUI-WAI interface
+abstract attribute WildlandUrbanInterface;
+abstract attribute WildlandAgricultureInterface;	 		
+
+model 'local:amarquez:im.fire.sicily:landcover_10m_2020_sicily_italy'
+//model 'local:akif.ortak:im.data.global:im-data-global-landcover.clc2012_v2018_20_epsg4326'
+	as landcover:LandCoverType
+		classified into
+			landcover:Saline							if	0,
+//			landcover:PulpPaperPlantation				if	11,
+			landcover:DeciduousBroadleafForest			if	60,
+			landcover:EvergreenConiferousForest			if	70,
+			landcover:Shrubland							if	120,
+			landcover:EvergreenShrubland				if	121,
+			landcover:DeciduousShrubland				if	122,
+			landcover:MineralExtraction					if	131,
+			landcover:GreenUrbanArea					if	141,
+			landcover:Urban								if	190,
+			landcover:PermanentlyIrrigatedArableLand	if	212,
+			landcover:Vineyard							if	221,
+			landcover:FruitAndBerryPlantation			if	222,
+			landcover:OliveGrove						if	223,
+			landcover:Pastureland						if	231,
+			landcover:ComplexCultivationPatternedLand	if	242,
+			landcover:MixedForest						if	313,
+			landcover:MoorAndHeathland					if	322,
+			landcover:SclerophyllousVegetation			if	323,
+			landcover:BeachDuneAndSand					if	331,
+			landcover:BareRock							if	332,
+			landcover:InlandMarsh						if	411,
+			landcover:SaltMarsh							if	421,
+			landcover:WaterBody							if	511,
+			landcover:NonVegetatedStillWaterBody		if	512,
+			landcover:CoastalLagoon						if	521;
+//		over sicilia; 
+			 		
+//	 		
+//occurrence of fire
+@time(start=2007, end=2019)
+model "local:amarquez:im.fire.sicily:occurrence_100m_2007_2020_sicily_italy"
+	as count of im:Added chemistry:Fire;
+	
+model 'local:amarquez:im.fire.sicily:wui_100m_2020_sicily_italy'
+	as value of WildlandUrbanInterface earth:Region;
+	
+model 'local:amarquez:im.fire.sicily:wai_100m_2020_sicily_italy'
+	as value of WildlandAgricultureInterface earth:Region;
+		
+model 'local:amarquez:im.fire.sicily:fueltype_100m_2020_sicily_italia'
+	as value of ecology:Forest during chemistry:Fire;
+
+model 'local:amarquez:im.fire.sicily:distance2road_100m_2020_sicily_italy'
+	as distance to infrastructure:Road in m;
+	
+model 'local:amarquez:im.fire.sicily:distance2humansettlement_100m_2020_sicily_italia'
+	as distance to infrastructure:HumanSettlement in m;
+
+model 'local:amarquez:im.fire.sicily:distance2protectedarea_100m_2020_sicily_italia'
+	as distance to conservation:ProtectedArea in m;
+
+//model 'local:amarquez:im.fire.sicily:elevation_100m_2020_sicily_italy'
+//	as geography:Elevation in m;
+//
+//model 'local:amarquez:im.fire.sicily:aspect_100m_2020_sicily_italy'
+//	as geography:Aspect in grade;
+//	
+//model 'local:amarquez:im.fire.sicily:slope_grade_100m_2007_2020_sicily_italy'
+//	as geography:Slope in grade;
+//	
+//
+////model 'local:amarquez:im.fire.sicily:20190114_tg'
+//model'local:amarquez:im.fire.sicily:20190803_tg'
+//	as earth:AtmosphericTemperature in Celsius named tg;
+
+
+@intensive(space)
+@time(step=1.month)
+//private model "klab:copernicus:sis-agrometeorological-indicators:temperature.mean,temperature.max,precipitation"
+//	as earth:Weather, 
+//	   earth:AtmosphericTemperature in Celsius named temperature_mean,
+//	   im:Weekly im:Maximum earth:AtmosphericTemperature in Celsius named temperature_max,
+//	   im:Weekly earth:PrecipitationVolume in mm named precipitation;
+//	
+//model 'local:amarquez:im.fire.sicily:20190114_tn'
+model 'local:amarquez:im.fire.sicily:20190803_tn' 
+	as im:Minimum earth:AtmosphericTemperature in Celsius named tn;
+	
+////model 'local:amarquez:im.fire.sicily:20190114_tx'
+model 'local:amarquez:im.fire.sicily:20190803_tx' 
+	as im:Weekly im:Maximum earth:AtmosphericTemperature in Celsius named tx3;
+	
+//model 'local:amarquez:im.fire.sicily:20190114_norain'
+//model 'local:amarquez:im.fire.sicily:20190803_norain' 
+model 'local:amarquez:im.fire.sicily:klab742297113643142657'
+	as count of im:Day without earth.incubation:Precipitation;
+	
+//@intensive(space) 
+//model 'local:amarquez:im.fire.sicily:20190114_r7t' 
+model 'local:amarquez:im.fire.sicily:20190803_r7d'
+	as im:Weekly earth:PrecipitationVolume in mm named r7t;
+
+@intensive(space)	
+//model 'local:amarquez:im.fire.sicily:20190114_r30t' 
+model 'local:amarquez:im.fire.sicily:20190803_r30d'
+	as im:Monthly earth:PrecipitationVolume in mm named r30t;
+
+@intensive(space)
+//model 'local:amarquez:im.fire.sicily:qq'
+//model 'local:amarquez:im.fire.sicily:qq_Jan'
+model 'local:amarquez:im.fire.sicily:solar_irradiance_sicilyextent'
+	as earth:SolarRadiation in J/m^2;

@@ -1,0 +1,69 @@
+{
+  "urn" : "local:amarquez:im.catania.fire:Sicily_boundary_wgs84",
+  "version" : "0.0.1",
+  "adapterType" : "vector",
+  "localPath" : "im.fire.sicily/resources/Sicily_boundary_wgs84.v0.0.1",
+  "geometry" : "#s1(1){bbox=[11.92617912842132 15.652935490080758 35.493691935511414 38.81212646006353],proj=EPSG:4326}",
+  "projectName" : "im.fire.sicily",
+  "localName" : "Sicily_boundary_wgs84.shp",
+  "type" : "OBJECT",
+  "resourceTimestamp" : 1624962899268,
+  "metadata" : {
+    "im:keywords" : "features,Sicily_boundary_wgs84",
+    "dc:title" : "Sicily_boundary_wgs84"
+  },
+  "parameters" : { },
+  "localPaths" : [ "im.fire.sicily\\resources/Sicily_boundary_wgs84.v0.0.1/Sicily_boundary_wgs84.shx", "im.fire.sicily\\resources/Sicily_boundary_wgs84.v0.0.1/Sicily_boundary_wgs84.prj", "im.fire.sicily\\resources/Sicily_boundary_wgs84.v0.0.1/Sicily_boundary_wgs84.dbf", "im.fire.sicily\\resources/Sicily_boundary_wgs84.v0.0.1/Sicily_boundary_wgs84.shp" ],
+  "history" : [ ],
+  "notifications" : [ ],
+  "attributes" : [ {
+    "name" : "COD_RIP",
+    "type" : "NUMBER",
+    "key" : false,
+    "optional" : true,
+    "exampleValue" : null,
+    "index" : 0
+  }, {
+    "name" : "COD_REG",
+    "type" : "NUMBER",
+    "key" : false,
+    "optional" : true,
+    "exampleValue" : null,
+    "index" : 0
+  }, {
+    "name" : "DEN_REG",
+    "type" : "TEXT",
+    "key" : false,
+    "optional" : true,
+    "exampleValue" : null,
+    "index" : 0
+  }, {
+    "name" : "Shape_Leng",
+    "type" : "NUMBER",
+    "key" : false,
+    "optional" : true,
+    "exampleValue" : null,
+    "index" : 0
+  }, {
+    "name" : "Shape_Area",
+    "type" : "NUMBER",
+    "key" : false,
+    "optional" : true,
+    "exampleValue" : null,
+    "index" : 0
+  } ],
+  "spatialExtent" : {
+    "east" : 15.652935490080758,
+    "west" : 11.92617912842132,
+    "north" : 38.81212646006353,
+    "south" : 35.493691935511414,
+    "gridResolution" : null,
+    "gridUnit" : null
+  },
+  "dependencies" : null,
+  "outputs" : null,
+  "categorizables" : [ ],
+  "exportFormats" : {
+    "shp" : "ESRI shapefile"
+  }
+}
